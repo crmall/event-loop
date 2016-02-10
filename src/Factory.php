@@ -7,7 +7,7 @@ class Factory
     public static function create()
     {
         // @codeCoverageIgnoreStart
-        if (class_exists('EvLoop')) {
+        if (class_exists(\EvLoop::class)) {
             return new EvLoop();
         } else if (function_exists('event_base_new')) {
             return new LibEventLoop();
